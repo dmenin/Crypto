@@ -1,6 +1,8 @@
 pragma solidity ^0.4.11;
 
-contract ChainList {
+import "./Owned.sol";
+
+contract ChainList is Owned {
   // Custom types
   struct Article {
     uint id;
@@ -110,5 +112,10 @@ contract ChainList {
 
     // trigger the event
     buyArticleEvent(_id, article.seller, article.buyer, article.name, article.price);
+  }
+
+  // kill the smart contract
+  function kill() onlyOwner {
+    selfdestruct(owner);
   }
 }
