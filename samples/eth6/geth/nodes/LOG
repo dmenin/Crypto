@@ -1,0 +1,6 @@
+=============== Jan 22, 2018 (GMT) ===============
+22:03:19.995685 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+22:03:20.003709 db@open opening
+22:03:20.004711 version@stat F·[] S·0B[] Sc·[]
+22:03:20.007719 db@janitor F·2 G·0
+22:03:20.007719 db@open done T·4.01ms
