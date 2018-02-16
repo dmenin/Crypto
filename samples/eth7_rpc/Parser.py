@@ -90,11 +90,21 @@ _rpcRequest("eth_accounts", None, "result") #list of acc owned by the client
 _rpcRequest("eth_blockNumber", None, "result") #most recent blocknumber
 
 
-_rpcRequest("eth_getBalance", ['0xd6279d1693330b892537bb2ccd8649486e90396e','latest'], "result")
-_rpcRequest("eth_getBalance", ['0xd6279d1693330b892537bb2ccd8649486e90396e','0x0'], "result")
-_rpcRequest("eth_getBalance", ['0xd6279d1693330b892537bb2ccd8649486e90396e','0x1957e2'], "result")
+int(
+_rpcRequest("eth_getBalance", ['0xd6279d1693330b892537bb2ccd8649486e90396e','latest'], "result")["result"]
+, 0)/10e17
+    
+int(
+_rpcRequest("eth_getBalance", ['0xd6279d1693330b892537bb2ccd8649486e90396e','0x1957e2'], "result")["result"]
+, 0)/10e17
+
+int(
+_rpcRequest("eth_getBalance", ['0xd6279d1693330b892537bb2ccd8649486e90396e','0x0'], "result")["result"]
+, 0)/10e17
 
 
+
+int("0x13a550ad09b044000", 0)/10e17
 
 
 _rpcRequest("eth_getStorageAt", None, "result") #????
@@ -170,24 +180,6 @@ _rpcRequest("net_listening", None, "result")
 _rpcRequest("net_listening", None, "result")
 
 _rpcRequest("net_listening", None, "result")
-
-
-_rpcRequest("net_listening", None, "result")
-
-_rpcRequest("net_listening", None, "result")
-
-_rpcRequest("net_listening", None, "result")
-
-
-_rpcRequest("net_listening", None, "result")
-
-_rpcRequest("net_listening", None, "result")
-
-_rpcRequest("net_listening", None, "result")
-
-
-
-
 
 
 
